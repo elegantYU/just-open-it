@@ -4,9 +4,11 @@
 	"minimum_chrome_version": "56.0.0",
 	"name": "just open it",
 	"short_name": "just open it",
-	"description": "打开页面",
+	"description": "再见👋！烦人的确认页",
 	"offline_enabled": true,
-	"icons": {},
+	"icons": {
+		"128": "static/icons/icon.png"
+	},
 	"browser_action": {
 		"default_icon": {},
 		"default_popup": "index.html",
@@ -18,11 +20,27 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
+			"matches": ["*://*.zhihu.com/*"],
+			"js": ["static/js/contentScript.js"]
+		},
+		{
+			"matches": ["*://*.csdn.net/*"],
+			"js": ["static/js/contentScript.js"]
+		},
+		{
+			"matches": ["*://*.jianshu.com/*"],
+			"js": ["static/js/contentScript.js"]
+		},
+		{
+			"matches": ["*://*.qq.com/*"],
+			"js": ["static/js/contentScript.js"]
+		},
+		{
+			"matches": ["*://t.cn/*"],
 			"js": ["static/js/contentScript.js"]
 		}
 	],
 	"web_accessible_resources": ["static/js/*"],
 	"content_security_policy": "script-src 'self' https://at.alicdn.com 'unsafe-eval'; object-src 'self'",
-	"permissions": ["tabs", "storage", "notifications", "unlimitedStorage", "<all_urls>"]
+	"permissions": ["tabs", "activeTab"]
 }

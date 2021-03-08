@@ -19,7 +19,6 @@ module.exports = {
 		index: resolve('../src/index.tsx'),
 		background: resolve('../src/services/index.ts'),
 		contentScript: resolve('../src/injectScripts'),
-		setting: resolve('../src/setting/index.tsx')
 	},
 	output: {
 		filename: 'static/js/[name].js',
@@ -144,13 +143,13 @@ module.exports = {
 		new CopyPlugin({
 			patterns: [
 				{
-					from: resolve("../public/manifest.json"),
+					from: "public/manifest.json",
 					to: "manifest.json",
 				},
-				// {
-				// 	from: resolve("../public/icons/**/*"),
-				// 	to: "static/icons/",
-				// },
+				{
+					from: "public/icons",
+					to: "static/icons",
+				},
 			]
 		}),
 		new Webpackbar({

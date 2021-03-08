@@ -17,6 +17,7 @@ const WrapperUI = styled.div`
 	padding: 0 2px;
 	color: #ffffff;
 	font-size: 12px;
+	white-space: nowrap;
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 4px;
 	transform: scale(0.8) translateX(-50%);

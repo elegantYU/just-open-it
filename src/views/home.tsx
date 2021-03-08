@@ -148,7 +148,7 @@ const App = () => {
 				<ul>{renderItemJSX()}</ul>
 			</ContentUI>
 			<FooterUI>
-				<IconUI className='iconfont icongit' data-text='求 star' onClick={handleGithubClick} />
+				<IconUI className='iconfont icongit' data-text='求star' onClick={handleGithubClick} />
 			</FooterUI>
 			{renderTipJSX()}
 		</WrapperUI>
