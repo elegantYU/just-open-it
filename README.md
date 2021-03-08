@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="#"><img src="https://github.com/elegantYU/just-open-it/tree/master/public/icons/icon.png" alt="Just Open It" width="100"></a>
+  <a href="#"><img src="https://raw.githubusercontent.com/elegantYU/just-open-it/master/public/icons/icon.png" alt="Just Open It" width="100"></a>
   <br>
   Just Open It
   <br>
