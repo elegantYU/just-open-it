@@ -8,6 +8,8 @@
 
 > 确认打开？我要你确认啊
 
+[![chrome web store](https://img.shields.io/chrome-web-store/v/mibogfohjjfppmobdajcjeobbfnobmfo.svg)](https://chrome.google.com/webstore/detail/mibogfohjjfppmobdajcjeobbfnobmfo) [![extension downloads](https://img.shields.io/chrome-web-store/users/mibogfohjjfppmobdajcjeobbfnobmfo.svg?label=users)](https://chrome.google.com/webstore/detail/mibogfohjjfppmobdajcjeobbfnobmfo)
+
 [![React](https://img.shields.io/badge/react-react17.0.1-blue)](https://github.com/facebook/react)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
