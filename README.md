@@ -15,4 +15,8 @@
 
 摆脱 csdn、知乎、qq 邮箱等等等等的中间确认页面！任何链接，一键直达！
 
+[下载地址](https://chrome.google.com/webstore/detail/mibogfohjjfppmobdajcjeobbfnobmfo)
+
+> 无需任何配置，下载完挂着就行
+
 各平台判断代码位于 `src/injectScripts` 中，若还有其他网站需要中转确认页面的，欢迎提 issue━(\*｀ ∀´\*)ノ亻!
