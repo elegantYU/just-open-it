@@ -1,5 +1,5 @@
 // 微信页面
-export default () => {
+const wx = () => {
 	const { href } = window.location;
 	const reg = /http(s|):\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?main_type=/;
 	const selectors = ['.ui-ellpisis-content', '.weui-msg__desc'];
@@ -9,3 +9,5 @@ export default () => {
 		window.location.href = target;
 	}
 };
+
+wx();

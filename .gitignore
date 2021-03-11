@@ -124,7 +124,8 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
-dist.zip
+360
+*.zip
 
 # Gatsby files
 .cache/
@@ -160,3 +161,7 @@ yarn.lock
 
 # git inital
 .git
+
+# extension
+*.crx
+*.pem

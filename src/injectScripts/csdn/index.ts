@@ -1,5 +1,5 @@
 // csdn 直接打开页面
-export default () => {
+const csdn = () => {
 	const { href } = window.location;
 	const reg = /^https:\/\/link\.csdn\.net\/\?target=/;
 	const target = document.querySelector('.loading-color2')?.textContent;
@@ -8,3 +8,4 @@ export default () => {
 		window.location.href = target;
 	}
 };
+csdn();

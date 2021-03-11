@@ -1,5 +1,5 @@
 // 微博跳转
-export default () => {
+const wb = () => {
 	const { href } = window.location;
 
 	if (/^http(s|):\/\/t\.cn/.test(href)) {
@@ -7,3 +7,5 @@ export default () => {
 		target && (window.location.href = target);
 	}
 };
+
+wb();

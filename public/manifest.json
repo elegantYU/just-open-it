@@ -16,31 +16,35 @@
 	},
 	"background": {
 		"scripts": ["static/js/background.js"],
-		"persistent": false
+		"persistent": true
 	},
 	"content_scripts": [
 		{
 			"matches": ["*://*.zhihu.com/*"],
-			"js": ["static/js/contentScript.js"]
+			"js": ["static/js/zhihu.entry.js"]
 		},
 		{
 			"matches": ["*://*.csdn.net/*"],
-			"js": ["static/js/contentScript.js"]
+			"js": ["static/js/csdn.entry.js"]
 		},
 		{
 			"matches": ["*://*.jianshu.com/*"],
-			"js": ["static/js/contentScript.js"]
+			"js": ["static/js/jianshu.entry.js"]
 		},
 		{
-			"matches": ["*://*.qq.com/*"],
-			"js": ["static/js/contentScript.js"]
+			"matches": ["*://mail.qq.com/*"],
+			"js": ["static/js/qqmail.entry.js"]
+		},
+		{
+			"matches": ["*://weixin110.qq.com/*"],
+			"js": ["static/js/weixin.entry.js"]
 		},
 		{
 			"matches": ["*://t.cn/*"],
-			"js": ["static/js/contentScript.js"]
+			"js": ["static/js/weibo.entry.js"]
 		}
 	],
 	"web_accessible_resources": ["static/js/*"],
 	"content_security_policy": "script-src 'self' https://at.alicdn.com 'unsafe-eval'; object-src 'self'",
-	"permissions": ["tabs", "activeTab"]
+	"permissions": ["activeTab"]
 }

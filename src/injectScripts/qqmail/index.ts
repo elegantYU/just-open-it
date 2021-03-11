@@ -1,5 +1,5 @@
 // qq 邮箱
-export default () => {
+const qq = () => {
 	const { href } = window.location;
 	const reg = /http(s|):\/\/mail\.qq\.com\/cgi-bin\/readtemplate\?t=safety/;
 	const target = document.querySelector('.safety-url')?.textContent;
@@ -8,3 +8,5 @@ export default () => {
 		window.location.href = target;
 	}
 };
+
+qq();

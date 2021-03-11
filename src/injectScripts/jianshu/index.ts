@@ -1,5 +1,5 @@
 // 简书
-export default () => {
+const js = () => {
 	const { href } = window.location;
 	const reg = /^https:\/\/www\.jianshu\.com\/go-wild\?ac=2&url=/;
 	const searchParameters = new URLSearchParams(href);
@@ -9,3 +9,5 @@ export default () => {
 		window.location.href = target;
 	}
 };
+
+js();

@@ -1,5 +1,5 @@
-// csdn 直接打开页面
-export default () => {
+// zhihu 直接打开页面
+const zh = () => {
 	const { href } = window.location;
 	const reg = /^http(s|):\/\/link\.zhihu\.com\/\?target=/;
 	const target = document.querySelector('.link')?.textContent;
@@ -8,3 +8,5 @@ export default () => {
 		window.location.href = target;
 	}
 };
+
+zh();

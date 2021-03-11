@@ -1,3 +1,4 @@
+const fs = require('fs')
 const path = require('path');
 const alias = require('./config/alias');
 const isDev = require('./config/isDev')
@@ -14,11 +15,20 @@ const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin');
 
 const resolve = p => path.resolve(__dirname, p)
 
+const hotModules = fs.readdirSync(path.resolve(__dirname, '../src/injectScripts/'));
+
+const entries = hotModules.reduce((obj, p) => {
+	if (p !== 'index.ts') {
+		return { ...obj, [`${p}.entry`]: `./src/injectScripts/${p}/index.ts` }
+	}
+	return {...obj}
+}, {})
+
 module.exports = {
 	entry: {
+		...entries,
 		index: resolve('../src/index.tsx'),
 		background: resolve('../src/services/index.ts'),
-		contentScript: resolve('../src/injectScripts'),
 	},
 	output: {
 		filename: 'static/js/[name].js',
