@@ -17,12 +17,8 @@ const resolve = p => path.resolve(__dirname, p)
 
 const hotModules = fs.readdirSync(path.resolve(__dirname, '../src/injectScripts/'));
 
-const entries = hotModules.reduce((obj, p) => {
-	if (p !== 'index.ts') {
-		return { ...obj, [`${p}.entry`]: `./src/injectScripts/${p}/index.ts` }
-	}
-	return {...obj}
-}, {})
+const entries = hotModules.reduce((obj, p) =>
+	p !== 'index.ts' ? { ...obj, [`${p}.entry`]: `./src/injectScripts/${p}/index.ts` } : {...obj}, {})
 
 module.exports = {
 	entry: {
