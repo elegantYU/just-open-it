@@ -1,10 +1,11 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Tip from './tip';
+import Item from './item';
 
 const WrapperUI = styled.div`
 	width: 200px;
 	height: auto;
+	padding: 5px 0;
 `;
 
 const HeaderUI = styled.div`
@@ -19,17 +20,10 @@ const ContentUI = styled.div`
 	height: auto;
 	padding: 10px;
 
-	.title {
-		margin-bottom: 10px;
-		font-size: 14px;
-		text-align: left;
-	}
-
 	ul {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 10px;
-		align-items: center;
 	}
 `;
 
@@ -45,22 +39,32 @@ const ItemUI = styled.div`
 
 const FooterUI = styled.div`
 	display: flex;
+	gap: 4px;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	height: 25px;
 	padding: 0 10px;
+	cursor: pointer;
+
+	p {
+		color: #666666;
+		font-size: 12px;
+		transform-origin: left center;
+	}
+
+	&:hover p {
+		text-decoration: underline;
+	}
 `;
 
 const IconUI = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 14px;
-	height: 14px;
-	font-size: 12px;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
-	cursor: pointer;
 
 	&:hover {
 		box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
@@ -104,55 +108,33 @@ const list: [string, JSX.Element][] = [
 			<use xlinkHref='#iconjianshu' />
 		</svg>,
 	],
+	[
+		'贴吧',
+		<svg className='icon' aria-hidden='true' key='简书'>
+			<use xlinkHref='#icontieba' />
+		</svg>,
+	],
 ];
 
 const handleGithubClick = () => window.open('https://github.com/elegantYU/just-open-it');
 const renderItemJSX = () =>
 	list.map(([title, item]) => (
-		<ItemUI key={title} data-text={title}>
+		<Item key={title} text={title}>
 			{item}
-		</ItemUI>
+		</Item>
 	));
 
-const App = () => {
-	const [hoverText, setHoverText] = useState<string | null>('');
-	const [offset, setOffset] = useState([0, 0]);
-	const [tempEl, setTempEl] = useState<EventTarget | null>(null);
-
-	const renderTipJSX = () => (hoverText ? <Tip text={hoverText} offset={offset} /> : undefined);
-
-	const handleRootHover: MouseEventHandler = (e) => {
-		const { target } = e;
-		const text = (target as HTMLElement)?.getAttribute('data-text');
-		const { x, y, width } = (target as HTMLElement)?.getBoundingClientRect();
-		const nodeOffset = [x + width / 2, y - 20];
-
-		if (text) {
-			setTempEl(target);
-			setOffset(nodeOffset);
-			setHoverText(text);
-		}
-	};
-	const handleRootOut: MouseEventHandler = (e) => {
-		const { target } = e;
-
-		if (tempEl && target !== tempEl && !(tempEl as HTMLElement).contains(target as HTMLElement)) {
-			setHoverText(null);
-		}
-	};
-
-	return (
-		<WrapperUI onMouseOver={handleRootHover} onMouseOut={handleRootOut}>
-			<HeaderUI>Just Open It</HeaderUI>
-			<ContentUI>
-				<ul>{renderItemJSX()}</ul>
-			</ContentUI>
-			<FooterUI>
-				<IconUI className='iconfont icongit' data-text='求star' onClick={handleGithubClick} />
-			</FooterUI>
-			{renderTipJSX()}
-		</WrapperUI>
-	);
-};
+const App = () => (
+	<WrapperUI>
+		<HeaderUI>Just Open It</HeaderUI>
+		<ContentUI>
+			<ul>{renderItemJSX()}</ul>
+		</ContentUI>
+		<FooterUI onClick={handleGithubClick}>
+			<IconUI className='iconfont icongit' data-text='求star' />
+			<p>star支持一下~</p>
+		</FooterUI>
+	</WrapperUI>
+);
 
 export default App;

@@ -1,5 +1,5 @@
 {
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"manifest_version": 2,
 	"minimum_chrome_version": "56.0.0",
 	"name": "just open it",
@@ -42,6 +42,10 @@
 		{
 			"matches": ["*://t.cn/*"],
 			"js": ["static/js/weibo.entry.js"]
+		},
+		{
+			"matches": ["*://jump2.bdimg.com/*"],
+			"js": ["static/js/tieba.entry.js"]
 		}
 	],
 	"web_accessible_resources": ["static/js/*"],

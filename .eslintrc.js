@@ -50,4 +50,12 @@ module.exports = {
 		indent: ['error', 'tab'],
 		'import/extensions': 'off',
 	},
+	overrides: [
+		{
+			files: ['**/*.tsx'],
+			rules: {
+				'react/prop-types': 'off',
+			},
+		},
+	],
 };
