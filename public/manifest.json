@@ -1,5 +1,5 @@
 {
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"manifest_version": 2,
 	"minimum_chrome_version": "56.0.0",
 	"name": "just open it",
@@ -21,19 +21,23 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.zhihu.com/*"],
-			"js": ["static/js/zhihu.entry.js"]
+			"js": ["static/js/zhihu.entry.js"],
+			"run_at": "document_start"
 		},
 		{
 			"matches": ["*://*.csdn.net/*"],
-			"js": ["static/js/csdn.entry.js"]
+			"js": ["static/js/csdn.entry.js"],
+			"run_at": "document_start"
 		},
 		{
 			"matches": ["*://*.jianshu.com/*"],
-			"js": ["static/js/jianshu.entry.js"]
+			"js": ["static/js/jianshu.entry.js"],
+			"run_at": "document_start"
 		},
 		{
 			"matches": ["*://mail.qq.com/*"],
-			"js": ["static/js/qqmail.entry.js"]
+			"js": ["static/js/qqmail.entry.js"],
+			"run_at": "document_start"
 		},
 		{
 			"matches": ["*://weixin110.qq.com/*"],

@@ -1,12 +1,11 @@
 // 简书
 const js = () => {
 	const { href } = window.location;
-	const reg = /^https:\/\/www\.jianshu\.com\/go-wild\?ac=2&url=/;
-	const searchParameters = new URLSearchParams(href);
-	const target = searchParameters.get('url');
+	const reg = /^http(s|):\/\/www\.jianshu\.com\/go-wild\?ac=2&url=(.*)/;
+	const res = reg.exec(href);
 
-	if (reg.test(href) && target) {
-		window.location.href = target;
+	if (res) {
+		window.location.href = decodeURIComponent(res[2]);
 	}
 };
 
