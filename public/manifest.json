@@ -1,5 +1,5 @@
 {
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"manifest_version": 2,
 	"minimum_chrome_version": "56.0.0",
 	"name": "just open it",
@@ -13,10 +13,6 @@
 		"default_icon": {},
 		"default_popup": "index.html",
 		"default_title": ""
-	},
-	"background": {
-		"scripts": ["static/js/background.js"],
-		"persistent": true
 	},
 	"content_scripts": [
 		{
