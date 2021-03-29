@@ -1,5 +1,5 @@
 // qq 邮箱
-const qq = () => {
+(() => {
 	const { href } = window.location;
 	const reg = /http(s|):\/\/mail\.qq\.com\/cgi-bin\/readtemplate\?t=safety/;
 	const params = new URLSearchParams(href);
@@ -8,6 +8,4 @@ const qq = () => {
 	if (reg.test(href) && target) {
 		window.location.href = target;
 	}
-};
-
-qq();
+})();

@@ -44,6 +44,11 @@
 			"js": ["static/js/weixin.entry.js"]
 		},
 		{
+			"matches": ["*://developers.weixin.qq.com/*"],
+			"js": ["static/js/wxDev.entry.js"],
+			"run_at": "document_start"
+		},
+		{
 			"matches": ["*://t.cn/*"],
 			"js": ["static/js/weibo.entry.js"]
 		},

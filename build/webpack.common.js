@@ -24,7 +24,6 @@ module.exports = {
 	entry: {
 		...entries,
 		index: resolve('../src/index.tsx'),
-		background: resolve('../src/services/index.ts'),
 	},
 	output: {
 		filename: 'static/js/[name].js',

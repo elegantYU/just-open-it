@@ -1,5 +1,5 @@
 // 简书
-const js = () => {
+(() => {
 	const { href } = window.location;
 	const reg = /^http(s|):\/\/www\.jianshu\.com\/go-wild\?ac=2&url=(.*)/;
 	const res = reg.exec(href);
@@ -7,6 +7,4 @@ const js = () => {
 	if (res) {
 		window.location.href = decodeURIComponent(res[2]);
 	}
-};
-
-js();
+})();
