@@ -18,7 +18,9 @@
 摆脱 csdn、知乎、qq 邮箱等等等等的中间确认页面！任何链接，一键直达！
 
 [chrome 下载](https://chrome.google.com/webstore/detail/mibogfohjjfppmobdajcjeobbfnobmfo)
+
 [360 极速 下载](https://ext.chrome.360.cn/webstore/search/just%20open%20it)
+
 [Edge 下载](https://microsoftedge.microsoft.com/addons/detail/chknnngdgbfaomnggjadegjpeckadokb)
 
 > 无需任何配置，下载完挂着就行
