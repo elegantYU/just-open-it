@@ -114,6 +114,12 @@ const list: [string, JSX.Element][] = [
 			<use xlinkHref='#icontieba' />
 		</svg>,
 	],
+	[
+		'腾讯文档',
+		<svg className='icon' aria-hidden='true' key='简书'>
+			<use xlinkHref='#icontengxunwendang' />
+		</svg>,
+	],
 ];
 
 const handleGithubClick = () => window.open('https://github.com/elegantYU/just-open-it');
