@@ -23,6 +23,8 @@ const entries = hotModules.reduce((obj, p) =>
 module.exports = {
 	entry: {
 		...entries,
+		injectScript: resolve('../src/injectScripts/index.ts'),
+		background: resolve('../src/services/index.ts'),
 		index: resolve('../src/index.tsx'),
 	},
 	output: {
@@ -140,10 +142,16 @@ module.exports = {
 			}
 		}),
 		new HtmlPlugin({
-			title: 'notion-cn',
+			title: 'just-open-it',
 			filename: 'index.html',
 			template: resolve('../public/index.html'),
 			chunks: ["vendors", "index"]
+		}),
+		new HtmlPlugin({
+			title: "",
+			filename: "background.html",
+			template: resolve('../public/index.html'),
+			chunks: ["vendors", "background"]
 		}),
 		new CopyPlugin({
 			patterns: [

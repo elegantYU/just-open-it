@@ -16,48 +16,15 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://*.zhihu.com/*"],
-			"js": ["static/js/zhihu.entry.js"],
-			"run_at": "document_start"
-		},
-		{
-			"matches": ["*://*.csdn.net/*"],
-			"js": ["static/js/csdn.entry.js"],
-			"run_at": "document_start"
-		},
-		{
-			"matches": ["*://*.jianshu.com/*"],
-			"js": ["static/js/jianshu.entry.js"],
-			"run_at": "document_start"
-		},
-		{
-			"matches": ["*://mail.qq.com/*"],
-			"js": ["static/js/qqmail.entry.js"],
-			"run_at": "document_start"
-		},
-		{
-			"matches": ["*://weixin110.qq.com/*"],
-			"js": ["static/js/weixin.entry.js"]
-		},
-		{
-			"matches": ["*://developers.weixin.qq.com/*"],
-			"js": ["static/js/wxDev.entry.js"],
-			"run_at": "document_start"
-		},
-		{
-			"matches": ["*://t.cn/*"],
-			"js": ["static/js/weibo.entry.js"]
-		},
-		{
-			"matches": ["*://jump2.bdimg.com/*"],
-			"js": ["static/js/tieba.entry.js"]
-		},
-		{
-			"matches": ["*://docs.qq.com/*"],
-			"js": ["static/js/txDoc.entry.js"],
+			"matches": ["<all_urls>"],
+			"js": ["static/js/injectScript.js"],
 			"run_at": "document_start"
 		}
 	],
+	"background": {
+		"page": "background.html",
+		"persistent": true
+	},
 	"web_accessible_resources": ["static/js/*"],
 	"content_security_policy": "script-src 'self' https://at.alicdn.com 'unsafe-eval'; object-src 'self'",
 	"permissions": ["activeTab"]
