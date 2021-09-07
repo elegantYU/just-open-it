@@ -1,0 +1,78 @@
+[
+	{
+		"type": "href",
+		"regExp": "L15odHRwczpcL1wvbGlua1wuY3NkblwubmV0XC9cP3RhcmdldD0oLiopLw==",
+		"jumpAction": {
+			"type": "decode",
+			"index": 1
+		}
+	},
+	{
+		"type": "href",
+		"regExp": "L15odHRwKHN8KTpcL1wvd3d3XC5qaWFuc2h1XC5jb21cL2dvLXdpbGRcP2FjPTImdXJsPSguKikv",
+		"jumpAction": {
+			"type": "decode",
+			"index": 2
+		}
+	},
+	{
+		"type": "search",
+		"regExp": "L2h0dHAoc3wpOlwvXC9tYWlsXC5xcVwuY29tXC9jZ2ktYmluXC9yZWFkdGVtcGxhdGVcP3Q9c2FmZXR5Lw==",
+		"jumpAction": {
+			"type": "params",
+			"field": "gourl"
+		}
+	},
+	{
+		"type": "dom",
+		"regExp": "L2h0dHAoc3wpOlwvXC9qdW1wMlwuYmRpbWdcLmNvbVwvc2FmZWNoZWNrXC9pbmRleFw/dXJsPS8=",
+		"jumpAction": {
+			"type": "href",
+			"selector": "[rel='nofollow noreferrer']"
+		}
+	},
+	{
+		"type": "search",
+		"regExp": "L2h0dHAoc3wpOlwvXC9kb2NzXC5xcVwuY29tXC9zY2VuYXJpb1wvbGlua1wuaHRtbC8=",
+		"jumpAction": {
+			"type": "params",
+			"field": "url"
+		}
+	},
+	{
+		"type": "dom",
+		"regExp": "L15odHRwKHN8KTpcL1wvdFwuY24v",
+		"jumpAction": {
+			"type": "textContent",
+			"selector": ".desc"
+		}
+	},
+	{
+		"type": "dom",
+		"regExp": "L15odHRwczpcL1wvZGV2ZWxvcGVyc1wud2VpeGluXC5xcVwuY29tXC9jb21tdW5pdHlcL21pZGRsZXBhZ2VcL2hyZWZcP2hyZWY9KC4qKS8=",
+		"jumpAction": {
+			"type": "textContent",
+			"selector": [".ui-ellpisis-content", ".weui-msg__desc"]
+		}
+	},
+	{
+		"type": "href",
+		"regExp": "L15odHRwczovL2RldmVsb3BlcnMud2VpeGluLnFxLmNvbS9jb21tdW5pdHkvbWlkZGxlcGFnZS9ocmVmP2hyZWY9KC4qKS8=",
+		"jumpAction": {
+			"type": "decode",
+			"index": 1,
+			"replace": ["/&amp;/g", "&"]
+		}
+	},
+	{
+		"type": "href",
+		"regExp": "L15odHRwKHN8KTpcL1wvbGlua1wuemhpaHVcLmNvbVwvXD90YXJnZXQ9KC4qKS8=",
+		"jumpAction": {
+			"type": "decode",
+			"index": 2
+		},
+		"otherScript": [
+			"(function () {const style = document.createElement('style');style.innerHTML = 'html{overflow: auto !important}.Modal-enter-done{display: none !important}';document.head.appendChild(style);})()"
+		]
+	}
+]
