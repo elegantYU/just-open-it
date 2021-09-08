@@ -78,5 +78,13 @@
 		"scripts": [
 			"(function () {const style = document.createElement('style');style.innerHTML = 'html{overflow: auto !important}.Modal-enter-done{display: none !important}';document.head.appendChild(style);})()"
 		]
+	},
+	{
+		"type": "href",
+		"regExp": "L15odHRwczpcL1wvbGlua1wuanVlamluXC5jblwvXD90YXJnZXQ9KC4qKS8=",
+		"jumpAction": {
+			"type": "decode",
+			"index": 1
+		}
 	}
 ]
