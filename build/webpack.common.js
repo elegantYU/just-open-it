@@ -22,7 +22,6 @@ const entries = hotModules.reduce((obj, p) =>
 
 module.exports = {
 	entry: {
-		...entries,
 		injectScript: resolve('../src/injectScripts/index.ts'),
 		background: resolve('../src/services/index.ts'),
 		index: resolve('../src/index.tsx'),

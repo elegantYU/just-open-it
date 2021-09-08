@@ -2,7 +2,7 @@
 import { sendMessage } from '@Utils/chrome';
 
 interface ConfigItem {
-	type: 'href' | 'search' | 'dom';
+	type: 'href' | 'search' | 'dom' | 'script';
 	regExp: string;
 	jumpAction: {
 		type: 'decode' | 'textContent' | 'params' | 'href';
@@ -11,7 +11,7 @@ interface ConfigItem {
 		replace?: string[];
 		field?: string;
 	};
-	otherScript?: string[];
+	scripts?: string[];
 }
 
 const { href } = window.location;
@@ -20,6 +20,12 @@ const { href } = window.location;
 const getConfig = () => sendMessage({ command: 'getConfig' });
 // base64转正则
 const btor = (b: string) => new RegExp(window.atob(b).slice(1, -1));
+// 插入脚本
+const insertScript = (s: string) => {
+	const scriptEl = document.createElement('script');
+	scriptEl.text = s;
+	document.body.append(scriptEl);
+};
 
 // href
 const hrefType = (data: ConfigItem) => {
@@ -71,6 +77,18 @@ const domType = (data: ConfigItem) => {
 		window.location.href = target;
 	}
 };
+// script
+const scriptType = (data: ConfigItem) => {
+	const { regExp, scripts } = data;
+	const reg = btor(regExp);
+	const res = reg.exec(href);
+
+	if (res) {
+		document.addEventListener('DOMContentLoaded', () => {
+			scripts?.forEach((s) => insertScript(s));
+		});
+	}
+};
 
 const init = async () => {
 	try {
@@ -92,6 +110,9 @@ const init = async () => {
 					break;
 				case 'dom':
 					domType(current);
+					break;
+				case 'script':
+					scriptType(current);
 					break;
 				default:
 					break;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Item from './item';
 
 const WrapperUI = styled.div`
 	width: 200px;
@@ -21,20 +20,20 @@ const ContentUI = styled.div`
 	padding: 10px;
 
 	ul {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		display: flex;
+		flex-wrap: wrap;
 		gap: 10px;
 	}
 `;
 
 const ItemUI = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	height: 28px;
+	padding: 0 12px;
+	color: #0059ff;
+	line-height: 28px;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const FooterUI = styled.div`
@@ -71,64 +70,10 @@ const IconUI = styled.div`
 	}
 `;
 
-const list: [string, JSX.Element][] = [
-	[
-		'微信',
-		<svg className='icon' aria-hidden='true' key='微信'>
-			<use xlinkHref='#iconweixin' />
-		</svg>,
-	],
-	[
-		'csdn',
-		<svg className='icon' aria-hidden='true' key='csdn'>
-			<use xlinkHref='#iconcsdn' />
-		</svg>,
-	],
-	[
-		'知乎',
-		<svg className='icon' aria-hidden='true' key='知乎'>
-			<use xlinkHref='#iconzhihu' />
-		</svg>,
-	],
-	[
-		'qq邮箱',
-		<svg className='icon' aria-hidden='true' key='qq邮箱'>
-			<use xlinkHref='#iconQQyouxiang' />
-		</svg>,
-	],
-	[
-		'微博',
-		<svg className='icon' aria-hidden='true' key='微博'>
-			<use xlinkHref='#iconweibo' />
-		</svg>,
-	],
-	[
-		'简书',
-		<svg className='icon' aria-hidden='true' key='简书'>
-			<use xlinkHref='#iconjianshu' />
-		</svg>,
-	],
-	[
-		'贴吧',
-		<svg className='icon' aria-hidden='true' key='简书'>
-			<use xlinkHref='#icontieba' />
-		</svg>,
-	],
-	[
-		'腾讯文档',
-		<svg className='icon' aria-hidden='true' key='简书'>
-			<use xlinkHref='#icontengxunwendang' />
-		</svg>,
-	],
-];
+const list: string[] = ['微信', 'csdn', '知乎', 'qq 邮箱', '微博', '简书', '贴吧', '腾讯文档', '掘金'];
 
 const handleGithubClick = () => window.open('https://github.com/elegantYU/just-open-it');
-const renderItemJSX = () =>
-	list.map(([title, item]) => (
-		<Item key={title} text={title}>
-			{item}
-		</Item>
-	));
+const renderItemJSX = () => list.map((title) => <ItemUI key={title}>{title}</ItemUI>);
 
 const App = () => (
 	<WrapperUI>
