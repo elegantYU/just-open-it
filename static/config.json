@@ -70,8 +70,12 @@
 		"jumpAction": {
 			"type": "decode",
 			"index": 2
-		},
-		"otherScript": [
+		}
+	},
+	{
+		"type": "script",
+		"regExp": "L15odHRwKHN8KTpcL1wvd3d3LnpoaWh1LmNvbS8=",
+		"scripts": [
 			"(function () {const style = document.createElement('style');style.innerHTML = 'html{overflow: auto !important}.Modal-enter-done{display: none !important}';document.head.appendChild(style);})()"
 		]
 	}
