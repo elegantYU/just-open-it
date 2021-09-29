@@ -1,5 +1,6 @@
 [
 	{
+		"name": "csdn",
 		"type": "href",
 		"regExp": "L15odHRwczpcL1wvbGlua1wuY3NkblwubmV0XC9cP3RhcmdldD0oLiopLw==",
 		"jumpAction": {
@@ -8,6 +9,7 @@
 		}
 	},
 	{
+		"name": "简书",
 		"type": "href",
 		"regExp": "L15odHRwKHN8KTpcL1wvd3d3XC5qaWFuc2h1XC5jb21cL2dvLXdpbGRcP2FjPTImdXJsPSguKikv",
 		"jumpAction": {
@@ -16,6 +18,7 @@
 		}
 	},
 	{
+		"name": "qq 邮箱",
 		"type": "search",
 		"regExp": "L2h0dHAoc3wpOlwvXC9tYWlsXC5xcVwuY29tXC9jZ2ktYmluXC9yZWFkdGVtcGxhdGVcP3Q9c2FmZXR5Lw==",
 		"jumpAction": {
@@ -24,6 +27,7 @@
 		}
 	},
 	{
+		"name": "贴吧",
 		"type": "dom",
 		"regExp": "L2h0dHAoc3wpOlwvXC9qdW1wMlwuYmRpbWdcLmNvbVwvc2FmZWNoZWNrXC9pbmRleFw/dXJsPS8=",
 		"jumpAction": {
@@ -32,6 +36,7 @@
 		}
 	},
 	{
+		"name": "腾讯文档",
 		"type": "search",
 		"regExp": "L2h0dHAoc3wpOlwvXC9kb2NzXC5xcVwuY29tXC9zY2VuYXJpb1wvbGlua1wuaHRtbC8=",
 		"jumpAction": {
@@ -40,6 +45,7 @@
 		}
 	},
 	{
+		"name": "微博",
 		"type": "dom",
 		"regExp": "L15odHRwKHN8KTpcL1wvdFwuY24v",
 		"jumpAction": {
@@ -48,6 +54,7 @@
 		}
 	},
 	{
+		"name": "微信",
 		"type": "dom",
 		"regExp": "L15odHRwczpcL1wvZGV2ZWxvcGVyc1wud2VpeGluXC5xcVwuY29tXC9jb21tdW5pdHlcL21pZGRsZXBhZ2VcL2hyZWZcP2hyZWY9KC4qKS8=",
 		"jumpAction": {
@@ -56,6 +63,7 @@
 		}
 	},
 	{
+		"name": "微信开发",
 		"type": "href",
 		"regExp": "L15odHRwczovL2RldmVsb3BlcnMud2VpeGluLnFxLmNvbS9jb21tdW5pdHkvbWlkZGxlcGFnZS9ocmVmP2hyZWY9KC4qKS8=",
 		"jumpAction": {
@@ -65,6 +73,7 @@
 		}
 	},
 	{
+		"name": "知乎",
 		"type": "href",
 		"regExp": "L15odHRwKHN8KTpcL1wvbGlua1wuemhpaHVcLmNvbVwvXD90YXJnZXQ9KC4qKS8=",
 		"jumpAction": {
@@ -73,6 +82,7 @@
 		}
 	},
 	{
+		"name": "掘金",
 		"type": "script",
 		"regExp": "L15odHRwKHN8KTpcL1wvKC4qKS56aGlodS5jb20v",
 		"scripts": [
@@ -80,6 +90,7 @@
 		]
 	},
 	{
+		"name": "掘金",
 		"type": "href",
 		"regExp": "L15odHRwczpcL1wvbGlua1wuanVlamluXC5jblwvXD90YXJnZXQ9KC4qKS8=",
 		"jumpAction": {

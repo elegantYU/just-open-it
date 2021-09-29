@@ -28,7 +28,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'static/js/[name].js',
-		path: resolve('../dist')
+		path: resolve('../dist'),
 	},
 	cache: {
 		type: "memory"
@@ -113,9 +113,6 @@ module.exports = {
 		minimizer: [
 			!isDev && new TerserPlugin({
 				extractComments: false,
-				terserOptions: {
-					compress: { pure_funcs: ['console.log'] }
-				}
 			}),
 			!isDev && new OptimizeCssPlugin()
 		].filter(Boolean),
@@ -125,6 +122,7 @@ module.exports = {
 			automaticNameDelimiter: '-',
 			cacheGroups: {
 				vendors: {
+					name: "vendors",
 					test: /[\\/]node_modules[\\/]/,
 					priority: -10,
 				},

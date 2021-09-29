@@ -2,6 +2,7 @@
 import { sendMessage } from '@Utils/chrome';
 
 interface ConfigItem {
+	name: string;
 	type: 'href' | 'search' | 'dom' | 'script';
 	regExp: string;
 	jumpAction: {
@@ -91,6 +92,7 @@ const scriptType = (data: ConfigItem) => {
 };
 
 const init = async () => {
+	console.log('进入 init');
 	try {
 		const data: ConfigItem[] = await getConfig();
 		const current = data.find((d) => {
@@ -100,7 +102,10 @@ const init = async () => {
 			return reg.test(href);
 		});
 
+		console.log('准备插入脚本', current?.name);
+
 		if (current) {
+			console.log('判断插入类型', current);
 			switch (current.type) {
 				case 'href':
 					hrefType(current);
@@ -117,6 +122,7 @@ const init = async () => {
 				default:
 					break;
 			}
+			console.log('执行完毕');
 		}
 	} catch (error) {
 		console.log('网络错误', error);
@@ -124,3 +130,4 @@ const init = async () => {
 };
 
 init();
+console.log('什么情况啊 a');

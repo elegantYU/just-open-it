@@ -34,10 +34,12 @@ loop();
 const getConfig = (send: (p: any) => void) => {
 	const config = getLocal(CONFIG) || '[]';
 	send(JSON.parse(config));
+	console.log('发送 config', JSON.parse(config));
 };
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 	const { command } = msg;
+	console.log('请求 config', command);
 
 	switch (command) {
 		case 'getConfig':
