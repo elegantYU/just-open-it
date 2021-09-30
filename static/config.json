@@ -13,7 +13,7 @@
 		"type": "script",
 		"regExp": "L15odHRwczpcL1wvbGlua1wuY3NkblwubmV0XC9cP3RhcmdldD0oLiopLw==",
 		"scripts": [
-			"(function () {const style = document.createElement('style');style.innerHTML = '.passport-login-container, .toolbar-advert { display: none !important; };';document.head.appendChild(style);})()"
+			"(function () {const style = document.createElement('style');style.innerHTML = '.passport-login-container, .toolbar-advert { display: none !important; }';document.head.appendChild(style);})()"
 		]
 	},
 	{
