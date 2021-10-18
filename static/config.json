@@ -94,7 +94,7 @@
 		"type": "script",
 		"regExp": "L15odHRwKHN8KTpcL1wvKC4qKS56aGlodS5jb20v",
 		"scripts": [
-			"(function () {const style = document.createElement('style');style.innerHTML = 'html{overflow: auto !important}.Modal-enter-done{display: none !important}';document.head.appendChild(style);})()"
+			"(function () {const style = document.createElement('style');const isPop = document.querySelector('.Modal-enter-done');style.innerHTML = 'html{overflow: auto !important}.Modal-enter-done{display: none !important}';isPop && document.head.appendChild(style);})()"
 		]
 	},
 	{
