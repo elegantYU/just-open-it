@@ -94,7 +94,7 @@
 		"type": "script",
 		"regExp": "L15odHRwKHN8KTpcL1wvKC4qKS56aGlodS5jb20v",
 		"scripts": [
-			"const m = new MutationObserver((m) => {m.forEach(v => {if (v.target == document.querySelector('.Modal-enter-done')) {console.log('找到了');}})});m.observe(document.querySelector('body'), { childList: true, subtree: true});"
+			"const body = document.body;const ob = new MutationObserver((m)=>{m.forEach(v=>{if (v.target === body && document.querySelector('.Modal-wrapper.Modal-enter-done')) {document.querySelector('.Button.Modal-closeButton.Button--plain').click();;}});});ob.observe(body, {childList: true,subtree: true});"
 		]
 	},
 	{
