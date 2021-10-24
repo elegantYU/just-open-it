@@ -14,7 +14,7 @@
 		"regExp": "L15odHRwczpcL1wvKC4qKVwuY3NkblwubmV0Lw==",
 		"scripts": [
 			"(function () {const style = document.createElement('style');style.innerHTML = '.passport-login-container, .toolbar-advert { display: none !important; }';document.head.appendChild(style);})()",
-                        "const body = document.body;const ob = new MutationObserver((m)=>{m.forEach(v=>{if (v.target === body && document.querySelector('.csdn-redpack-close')) {document.querySelector('.csdn-redpack-close').click();;}});});ob.observe(body, {childList: true,subtree: true});"
+                        "const body = document.body;const ob = new MutationObserver((m)=>{m.forEach(v=>{if (v.target === body) {if (document.querySelector('.csdn-redpack-close')) {document.querySelector('.csdn-redpack-close').click();} else if (document.querySelector('.over-the-screen-close')) {document.querySelector('.over-the-screen-close').click();}}});});ob.observe(body, {childList: true,subtree: true});",
 		]
 	},
 	{
