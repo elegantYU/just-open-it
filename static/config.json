@@ -95,7 +95,7 @@
 		"type": "script",
 		"regExp": "L15odHRwKHN8KTpcL1wvKC4qKS56aGlodS5jb20v",
 		"scripts": [
-			"const body = document.body;const ob = new MutationObserver((m)=>{m.forEach(v=>{if (v.target === body && document.querySelector('.Modal-wrapper.Modal-enter-done')) {document.querySelector('.Button.Modal-closeButton.Button--plain').click();;}});});ob.observe(body, {childList: true,subtree: true});"
+			"const body = document.body;let isLogin = false;const ob = new MutationObserver((m)=>{m.forEach(v=>{if (v.target === body && document.querySelector('.QuestionHeader-profile button')) {isLogin = !document.querySelector('.QuestionHeader-profile button').innerText;}if (v.target === body && document.querySelector('.Modal-wrapper.Modal-enter-done')) {!isLogin && document.querySelector('.Button.Modal-closeButton.Button--plain').click();;}});});ob.observe(body, {childList: true,subtree: true});"
 		]
 	},
 	{
