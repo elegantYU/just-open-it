@@ -106,5 +106,14 @@
 			"type": "decode",
 			"index": 1
 		}
+	},
+	{
+		"name": "开源中国",
+		"type": "href",
+		"regExp": "L15odHRwKHN8KTpcL1wvd3d3XC5vc2NoaW5hXC5uZXRcL2FjdGlvblwvR29Ub0xpbmtcP3VybD0oLiopLw==",
+		"jumpAction": {
+			"type": "decode",
+			"index": 2
+		}
 	}
 ]
