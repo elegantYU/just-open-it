@@ -115,5 +115,14 @@
 			"type": "decode",
 			"index": 2
 		}
+	},
+	{
+		"name": "码云-Gitee",
+		"type": "href",
+		"regExp": "L15odHRwKHN8KTpcL1wvZ2l0ZWVcLmNvbVwvbGlua1w/dGFyZ2V0PSguKikv",
+		"jumpAction": {
+			"type": "decode",
+			"index": 2
+		}
 	}
 ]
