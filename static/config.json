@@ -130,7 +130,7 @@
 		"type": "script",
 		"regExp": "L15odHRwczovL3d3dy55dXF1ZS5jb20vci9nb3RvP3VybD0oLiopLw==",
 		"scripts": [
-			"(function(){const a = document.querySelector("p[class^=`Confirmation-module_leaveConfirmLink_`");const t = a.innerText;location.href = t;})()"
+			"(function(){const a = document.querySelector('p[class^=`Confirmation-module_leaveConfirmLink_`');const t = a.innerText;location.href = t;})()"
 		]
 	}
 ]
