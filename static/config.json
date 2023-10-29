@@ -124,5 +124,14 @@
 			"type": "decode",
 			"index": 2
 		}
+	},
+	{
+		"name": "语雀",
+		"type": "dom",
+		"regExp": "L15odHRwczovL3d3dy55dXF1ZS5jb20vci9nb3RvP3VybD0oLiopLw==",
+		"jumpAction": {
+			"type": "textContent",
+			"selector": ["p[class^=`Confirmation-module_leaveConfirmLink_`]"]
+		}
 	}
 ]
